@@ -10,6 +10,7 @@ This model has the following notable features:
 ● The model has a smaller dimensional size without significant degradation in performance.
 
 CodeFuse-CGE-Large Model Configuration  
+huggingface：[codefuse-ai/CodeFuse-CGE-Large](https://huggingface.co/codefuse-ai/CodeFuse-CGE-Large)   
 Base Model: CodeQwen1.5-7B-Chat  
 Model Size: 7B  
 Embedding Dimension: 1024  
@@ -25,7 +26,8 @@ vllm=0.5.3
 ```
 
 
-CodeFuse-CGE-Small Model Configuration
+CodeFuse-CGE-Small Model Configuration  
+huggingface：[codefuse-ai/CodeFuse-CGE-Small](https://huggingface.co/codefuse-ai/CodeFuse-CGE-Small)    
 Base Model: Phi-3.5-mini-instruct  
 Model Size: 3.8B  
 Embedding Dimension: 1024  
