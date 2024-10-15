@@ -18,11 +18,13 @@ Hidden Layers: 32
 
 Requirements  
 ```
-flash_attn==2.4.2
-torch==2.1.0
+#flash_attn==2.4.2
+#torch==2.1.0
 accelerate==0.28.0
+deepspeed==0.15.2
+peft==0.13.2
+vllm==0.5.3
 transformers==4.39.2 
-vllm=0.5.3
 ```
 
 
@@ -35,9 +37,11 @@ Hidden Layers: 32
 
 Requirements  
 ```
-flash_attn==2.4.2
-torch==2.1.0
+#flash_attn==2.4.2
+#torch==2.1.0
 accelerate==0.28.0
+deepspeed==0.15.2
+peft==0.13.2
 transformers>=4.43.0
 ```
 

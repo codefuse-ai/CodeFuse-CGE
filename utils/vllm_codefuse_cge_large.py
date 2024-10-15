@@ -506,6 +506,7 @@ class CodeFuse_CGE_Large(nn.Module, SupportsLoRA):
         self.ln = config.pma_ln
         self.norm = config.pma_norm
         self.pma_mode = config.pma_norm_mode
+        self.compress_dim = config.compress_dim  # 从 config 获取 compress_dim
         self.mha_pma = PMA(self.emb_dim, self.compress_dim, self.num_heads, 1, ln=self.ln, pma_mode=self.pma_mode).to("cuda")
         if config.tie_word_embeddings:
             self.lm_head = self.plm_model.embed_tokens
