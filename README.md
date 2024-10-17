@@ -118,6 +118,10 @@ Note:
 1. After adapting Vllm, the model's input can only have a batch size of 1; otherwise, it will result in an array overflow error.  
 2. Only the CodeFuse-CGE-Large model has been adapted, and support for the CodeFuse-CGE-Small model will be available soon.
 
+## Contact us
+
+![CodeFuse-AI](./resources/CodeFuse-AI.png)
+
 
 
 ## Acknowledgement
