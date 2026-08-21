@@ -28,6 +28,30 @@ In this repo we provide a streamlined and efficient script for training embeddin
 - Run `tokenize_data_qwen.py` to tokenize the downloaded data, and then cancatenate all corpus files into a single `corpus.parquet` file.
 - Modify model path, data path, and other arguments in `configs/config.json`.
 - Start training with `accelerate launch --config_file configs/accelerate_config.yaml run.py --config configs/config.json`.
+## Ray Distributed Training
+
+- Install Ray: `pip install -r requirements.txt`
+- Launch local Ray training:
+
+```bash
+python ray_run.py \
+  --model_path Qwen/Qwen2.5-7B \
+  --output_dir ./outputs-ray \
+  --cache_dir ./cache \
+  --train_data_path ./training_data/data_tokenized_qwen \
+  --max_seq_length 1024 \
+  --train_batch_size 2 \
+  --train_epochs 1 \
+  --train_steps -1 \
+  --use_gpu \
+  --num_workers 2
+```
+
+- Multi-node: start a Ray cluster (see Ray docs) and submit the job via `ray job submit` or run on the head node; the script uses `TorchTrainer` with DDP and reports checkpoints to Ray storage. Checkpoints are saved under `outputs-ray/epoch_*` and can be used for fault-tolerant restarts.
+
+Notes:
+- This Ray runner consumes the same tokenized parquet fields as the Accelerate pipeline.
+- Cross-worker in-batch retrieval loss is simplified initially; extendable via Ray Train collectives.
 
 Note: we recommend setting `num_processes` to 1 in `configs/accelerate_config.yaml` and launch the training code once to generate cache for training data before starting the actual training.
 

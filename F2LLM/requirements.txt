@@ -1,7 +1,9 @@
 accelerate
+ray[train]>=2.30.0
+pyyaml>=6.0
 datasets
 deepspeed
-flash-attn
+flash-attn; platform_system == "Linux" and platform_machine == "x86_64"
 torch
-transformers
+transformers>=4.51.0
 tensorboard

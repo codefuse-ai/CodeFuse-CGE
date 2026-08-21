@@ -35,6 +35,8 @@ class Args:
     log_interval: int = 20
     checkpointing_steps: int = 100
     validation_steps: int = 100
+    # gradient accumulation
+    gradient_accumulation_steps: int = 1
     # just placeholder, for logging purpose
     num_processes: int=0
 
