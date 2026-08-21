@@ -15,4 +15,4 @@ Embedding-related repos from CodeFuse, including:
 
 **Star History**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=codefuse-ai/CodeFuse-Embeddings&type=date&legend=top-left)](https://www.star-history.com/#codefuse-ai/CodeFuse-Embeddings&type=date&legend=top-left)
+[![Star History Chart](https://star-history.dera.page/svg?repos=codefuse-ai/CodeFuse-Embeddings&type=date&legend=top-left)](https://star-history.dera.page/#codefuse-ai/CodeFuse-Embeddings&type=date&legend=top-left)
