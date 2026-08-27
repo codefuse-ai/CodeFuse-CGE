@@ -1,7 +1,7 @@
 {
-  "model_path": "models/qwen3-4b",
-  "experiment_id": "4b+lr.8e-6+bs.16x32+context.1024+2epochs",
-  "train_data_path": "training_data/data_tokenized_qwen",
+  "model_path": "models/bert",
+  "experiment_id": "bert+lr.8e-6+bs.16x32+context.1024+1epochs",
+  "train_data_path": "data_tokenized_bert",
   "output_dir": "output",
   "tb_dir": "output/tb",
   "cache_dir": "cache",
